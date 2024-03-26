@@ -1,0 +1,3 @@
+[package]
+name = "rust-hands-on-exercises"
+edition = "2021"

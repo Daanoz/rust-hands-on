@@ -1,0 +1,29 @@
+name: Pages
+
+on:
+    push:
+      branches:
+        - main
+
+concurrency:
+    group: ${{ github.ref }}-pages
+    cancel-in-progress: true
+
+jobs:
+  publish-pages:
+    runs-on: ubuntu-latest
+    container: node:21
+    permissions:
+        contents: write
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies 
+      run: npm install -g backslide
+    - name: Export presentation
+      run: bs export && mv ./dist/presentation.html ./dist/index.html
+      working-directory: ./presentation
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./presentation/dist
