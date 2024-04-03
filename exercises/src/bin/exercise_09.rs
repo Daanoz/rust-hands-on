@@ -9,12 +9,12 @@
 fn exercise() -> String {
     // Do not change this function
     let value = String::from("Hello world");
-    read_string(value);
-    read_string(value);
+    read_string(&value);
+    read_string(&value);
     value
 }
 
-fn read_string(value: String) {
+fn read_string(value: &String) {
     println!("{}", value);
 }
 

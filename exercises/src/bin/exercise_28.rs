@@ -7,15 +7,18 @@ use std::collections::{HashMap, HashSet};
 ///
 
 fn vector_sum(vector: Vec<i32>) -> i32 {
-    todo!("Return the sum of the vector");
+    vector.into_iter().sum()
 }
 
 fn hashset_product(hashset: HashSet<i32>) -> i32 {
-    todo!("Return the product of the hashset");
+    hashset.into_iter().product()
 }
 
 fn hashmap_sum(hashmap: HashMap<&str, Vec<i32>>) -> HashMap<&str, i32> {
-    todo!("Return the sum of the hashmap values per key");
+    hashmap
+        .into_iter()
+        .map(|(key, value)| (key, value.into_iter().sum()))
+        .collect()
 }
 
 fn main() {

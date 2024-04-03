@@ -18,6 +18,11 @@ struct Order {
     shipping: i32,
     tax: i32,
 }
+impl Order {
+    fn total_cost(&self) -> i32 {
+        self.cost + self.shipping + self.tax
+    }
+}
 
 fn main() {
     exercise();

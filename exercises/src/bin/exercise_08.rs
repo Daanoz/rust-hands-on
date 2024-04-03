@@ -7,7 +7,7 @@
 #[allow(unused)]
 fn exercise() -> String {
     let value = String::from("Hello world");
-    read_string(value);
+    let value = read_string(value);
     value
 }
 

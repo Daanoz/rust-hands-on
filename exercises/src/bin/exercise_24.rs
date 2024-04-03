@@ -23,6 +23,17 @@ struct Square {
 struct Circle {
     value: f32,
 }
+impl Area for Square {
+    fn area(&self) -> f32 {
+        self.value * self.value
+    }
+}
+impl Area for Circle {
+    fn area(&self) -> f32 {
+        let radius = self.value / 2.0;
+        core::f32::consts::PI * radius * radius
+    }
+}
 
 trait Area {
     fn area(&self) -> f32;

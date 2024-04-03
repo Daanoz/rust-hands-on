@@ -8,8 +8,9 @@ fn exercise() -> i32 {
     let mut sum = 0;
 
     for i in 1..=100 {
-        let divided = integer_divided_by_two(i);
-        todo!("If the `integer_divided_by_two` function returns Some value, add its output to the sum");
+        if let Some(value) = integer_divided_by_two(i) {
+            sum += value;
+        }
     }
 
     sum

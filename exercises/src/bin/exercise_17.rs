@@ -12,7 +12,8 @@ fn exercise() -> i32 {
     let shipping = 10;
     let tax = 5;
 
-    todo!("Create an order using the builder pattern");
+    let order = OrderBuilder::new(cost).shipping(shipping).tax(tax).build();
+    order.total_cost()
 }
 
 #[allow(unused)]

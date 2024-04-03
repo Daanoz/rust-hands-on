@@ -11,7 +11,7 @@ fn exercise() -> String {
     value
 }
 
-fn read_first_word() {
+fn read_first_word(value: &str) -> &str {
     // Adjust the signature of this function to make the example compile
     value.split_once(' ').unwrap().0
 }

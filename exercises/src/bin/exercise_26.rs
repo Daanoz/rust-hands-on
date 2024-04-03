@@ -8,19 +8,29 @@ use std::collections::{HashMap, HashSet};
 
 fn vector_sum(vector: Vec<i32>) -> i32 {
     let mut total = 0;
-    todo!("Return the sum of the vector");
+    for i in vector {
+        total += i;
+    }
     total
 }
 
 fn hashset_product(hashset: HashSet<i32>) -> i32 {
     let mut total = 1;
-    todo!("Return the product of the hashset");
+    for i in hashset {
+        total *= i;
+    }
     total
 }
 
 fn hashmap_sum(hashmap: HashMap<&str, Vec<i32>>) -> HashMap<&str, i32> {
     let mut total = HashMap::new();
-    todo!("Return the sum of the hashmap values per key");
+    for (key, value) in hashmap {
+        let mut sum = 0;
+        for i in value {
+            sum += i;
+        }
+        total.insert(key, sum);
+    }
     total
 }
 

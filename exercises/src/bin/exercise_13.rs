@@ -6,7 +6,8 @@
 ///
 
 fn exercise() -> (i32, String) {
-    todo!("Call get_input and return the sum of all i32 and the concatenation of all Strings")
+    let (a, b, c, d, e) = get_input();
+    (a + c + e, format!("{}{}", b, d))
 }
 
 fn get_input() -> (i32, String, i32, String, i32) {

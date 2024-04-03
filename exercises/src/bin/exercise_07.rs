@@ -12,10 +12,12 @@ fn exercise() -> String {
     let c = String::from("five");
     let d = c;
 
-    // format!("{a}={c}")
-    // format!("{b}={c}")
-    // format!("{a}={d}")
-    // format!("{b}={d}")
+    // format!("{a}={c}") // Invalid: borrow of moved value `c`
+    // format!("{b}={c}") // Invalid: borrow of moved value `c`
+    format!("{a}={d}") // Valid: as a is a primitive type, it has a copy trait,
+                       // meaning that b is not taking ownership but is a copy of a
+                       // format!("{b}={d}") // Valid: as a is a primitive type, it has a copy trait,
+                       // meaning that b is not taking ownership but is a copy of a
 }
 
 fn main() {

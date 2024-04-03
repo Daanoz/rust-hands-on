@@ -21,6 +21,10 @@ fn exercise() -> String {
     )
 }
 
+fn get_first<T>(pair: (T, T)) -> T {
+    pair.0
+}
+
 fn main() {
     println!("{}", exercise());
 }

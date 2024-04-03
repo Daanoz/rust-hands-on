@@ -26,6 +26,11 @@ struct Order {
     shipping: i32,
     tax: i32,
 }
+impl Order {
+    fn apply_discount_to_cost(&mut self, discount: i32) {
+        self.cost -= discount;
+    }
+}
 
 fn main() {
     exercise();

@@ -32,6 +32,10 @@ impl Order {
     fn cost_without_tax(&self) -> i32 {
         self.cost + self.shipping
     }
+
+    fn have_equal_cost_without_tax(order1: &Order, order2: &Order) -> bool {
+        order1.cost_without_tax() == order2.cost_without_tax()
+    }
 }
 
 fn main() {

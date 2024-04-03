@@ -6,12 +6,21 @@
 fn exercise((orange, apple, banana): (Product, Product, Product)) -> f32 {
     let mut basket = Basket { items: vec![] };
 
-    // basket.add(Product);
+    for _ in 0..3 {
+        basket.add(orange.clone());
+    }
+    for _ in 0..2 {
+        basket.add(apple.clone());
+    }
+    for _ in 0..5 {
+        basket.add(banana.clone());
+    }
 
     basket.print();
     basket.total()
 }
 
+#[derive(Debug, Clone)]
 struct Product {
     #[allow(dead_code)]
     name: String,

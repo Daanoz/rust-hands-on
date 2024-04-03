@@ -9,7 +9,7 @@ fn exercise() -> i32 {
     let mut output = "seven"; // Do not change this line
 
     println!("The value of output is: {}", output);
-    output = 5;
+    let output = 5;
     println!("The value of output is: {}", output);
     output // Do not change this line
 }

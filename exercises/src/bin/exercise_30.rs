@@ -6,7 +6,15 @@
 fn exercise((orange, apple, banana): (Product, Product, Product)) -> f32 {
     let mut basket = Basket { items: vec![] };
 
-    // basket.add(Product);
+    for _ in 0..3 {
+        basket.add(&orange);
+    }
+    for _ in 0..2 {
+        basket.add(&apple);
+    }
+    for _ in 0..5 {
+        basket.add(&banana);
+    }
 
     basket.print();
     basket.total()
@@ -20,12 +28,12 @@ struct Product {
     price: f32,
 }
 
-struct Basket {
-    items: Vec<Product>,
+struct Basket<'a> {
+    items: Vec<&'a Product>,
 }
 
-impl Basket {
-    fn add(&mut self, product: Product) {
+impl<'a> Basket<'a> {
+    fn add(&mut self, product: &'a Product) {
         self.items.push(product);
     }
 

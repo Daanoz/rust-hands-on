@@ -9,12 +9,13 @@ fn exercise() -> i32 {
     divide(value)
 }
 
-fn divide(value: i32) {
+#[allow(clippy::eq_op)]
+fn divide(value: i32) -> i32 {
     if value == 0 {
         0
     } else {
         value / value
-    };
+    }
 }
 
 fn main() {

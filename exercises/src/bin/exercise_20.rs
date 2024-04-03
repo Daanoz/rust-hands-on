@@ -17,6 +17,19 @@ enum TrafficLight {
     Yellow,
     Green,
 }
+impl TrafficLight {
+    fn switch_to_next(&self) -> TrafficLight {
+        if self == &TrafficLight::Green {
+            TrafficLight::Yellow
+        } else if self == &TrafficLight::Yellow {
+            TrafficLight::Red
+        } else if self == &TrafficLight::Red {
+            TrafficLight::Green
+        } else {
+            unreachable!()
+        }
+    }
+}
 
 fn main() {
     exercise();

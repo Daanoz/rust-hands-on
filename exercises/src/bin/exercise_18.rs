@@ -4,7 +4,7 @@
 /// is positive, -1 if the number is negative, and 0 if the number is zero.
 ///
 
-fn exercise() -> () {
+fn exercise() {
     // Do not change this function
     println!("Sign for 5 is {}", sign(5));
     println!("Sign for 25 is {}", sign(25));
@@ -13,7 +13,13 @@ fn exercise() -> () {
 }
 
 fn sign(value: i32) -> i32 {
-    todo!("implement sign function here")
+    if value > 0 {
+        1
+    } else if value < 0 {
+        -1
+    } else {
+        0
+    }
 }
 
 fn main() {

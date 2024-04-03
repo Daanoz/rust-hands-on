@@ -6,7 +6,7 @@
 fn exercise() -> i32 {
     let tuple = (1, 2, 3, 5, 13, 21, 34);
 
-    todo!("return the correct entry from the tuple")
+    tuple.3
 }
 
 fn main() {

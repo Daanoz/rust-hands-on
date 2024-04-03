@@ -6,7 +6,11 @@
 use std::num::ParseIntError;
 
 fn exercise(input: &str) -> i32 {
-    todo!();
+    if let Ok(value) = int_value(input) {
+        value
+    } else {
+        0
+    }
 }
 
 #[allow(dead_code)]

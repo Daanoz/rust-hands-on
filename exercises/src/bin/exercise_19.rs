@@ -6,7 +6,9 @@
 fn exercise() -> i32 {
     let mut sum = 0;
 
-    todo!("Sum the numbers from 1 to 100 and store the result in the variable `sum` here");
+    for i in 1..=100 {
+        sum += i;
+    }
 
     sum
 }

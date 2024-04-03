@@ -17,8 +17,8 @@ mod example {
         Model { value: 5 }
     }
 
-    struct Model {
-        value: i32,
+    pub struct Model {
+        pub value: i32,
     }
 }
 

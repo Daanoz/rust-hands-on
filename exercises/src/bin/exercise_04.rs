@@ -9,7 +9,7 @@ fn exercise() -> i32 {
     let mut output = 7; // Do not change this line
     {
         println!("The value of output is: {}", output);
-        output = 5; // <-- how to tell the compiler that this is a different variable?
+        let output = 5; // <-- how to tell the compiler that this is a different variable?
         println!("The value of output is: {}", output);
     }
     output // Do not change this line

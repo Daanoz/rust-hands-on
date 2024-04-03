@@ -4,7 +4,7 @@
 /// Try to use pattern matching to implement the method.
 ///
 
-fn exercise() -> () {
+fn exercise() {
     // Do not change this function
     println!("Dog sound: {}", Animal::Dog.make_sound());
     println!("Cat sound: {}", Animal::Cat.make_sound());
@@ -16,6 +16,15 @@ enum Animal {
     Dog,
     Cat,
     Cow,
+}
+impl Animal {
+    fn make_sound(&self) -> &str {
+        match self {
+            Animal::Dog => "Woof",
+            Animal::Cat => "Meow",
+            Animal::Cow => "Moo",
+        }
+    }
 }
 
 fn main() {

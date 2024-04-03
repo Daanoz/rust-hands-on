@@ -6,7 +6,8 @@
 ///
 
 fn exercise(a: i32, b: i32) -> i32 {
-    todo!("Call the apply function twice with a closure defined above");
+    let sum = apply(|a, b| a + b, a, b);
+    apply(|a, b| a * b, sum, b)
 }
 
 fn apply<F: Fn(i32, i32) -> i32>(func: F, a: i32, b: i32) -> i32 {

@@ -5,12 +5,12 @@
 /// value by 2? Hint: refer to exercise_01 to see how to add mutability to a variable.
 ///
 fn exercise() -> i32 {
-    let value = 5;
-    times_two(value);
+    let mut value = 5;
+    times_two(&mut value);
     value
 }
 
-fn times_two(value: i32) {
+fn times_two(value: &mut i32) {
     *value *= 2; // This line does not require any changes!
 }
 
